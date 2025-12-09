@@ -1,0 +1,50 @@
+# برگرد به پوشه اصلی task-manager
+cd ..  # از frontend بیا بیرون
+cd ..  # از task-manager بیا بیرون تا برسی به projects
+
+# حالا برو توی task-manager
+cd task-manager
+
+# Initialize کردن Git
+git init
+
+# ساخت فایل .gitignore
+touch .gitignore
+```
+
+## ۳. محتوای `.gitignore` در پوشه اصلی:
+```
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment variables
+.env
+.env.local
+frontend/.env.local
+backend/.env
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Production
+backend/dist/
+backend/build/
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
